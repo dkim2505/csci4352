@@ -112,10 +112,6 @@ print(model.summary())
 model.compile(optimizer='adam', loss=tf.losses.SparseCategoricalCrossentropy(from_logits=True), metrics=['accuracy'])
 #history = model.fit(train_ds, validation_data=val_ds, epochs=100)
 
-
-
-
-
 history = model.fit(train_ds, validation_data=val_ds, epochs=100)
 y_vloss = history.history['val_loss']
 y_loss = history.history['loss']
